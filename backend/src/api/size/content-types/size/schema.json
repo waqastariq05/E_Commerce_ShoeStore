@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sizes",
+  "info": {
+    "singularName": "size",
+    "pluralName": "sizes",
+    "displayName": "Size"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sizeNo": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "sizes"
+    }
+  }
+}

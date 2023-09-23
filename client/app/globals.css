@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --text-green: #60ff00;
+}
+
+.btn {
+    background-color: #000;
+    padding: 12px 30px;
+    border-radius: 5px;
+    color: var(--text-green);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 50px;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.4);
+    transform: skew(25deg);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.btn:hover:before {
+    left: 150%;
+    opacity: 1;
+}
+
+#price::-webkit-slider-thumb {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--text-green);
+    cursor: pointer;
+}
+
+.banner {
+    background-image: url('../public/banner2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form-control:checked .form-label {
+    background: var(--text-green);
+}
